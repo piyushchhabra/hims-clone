@@ -42,7 +42,7 @@ const Qna = () => {
   const toggleOpen = () => setIsOpen(!isOpen);
   const toggleOpen2 = () => setIsOpen2(!isOpen2);
   const toggleOpen3 = () => setIsOpen3(!isOpen3);
-  const toggleOpen4 = () => setIsOpen3(!isOpen4);
+  const toggleOpen4 = () => setIsOpen4(!isOpen4);
   const toggleOpen5 = () => setIsOpen5(!isOpen5);
   return (
     <>
