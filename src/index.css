@@ -1,13 +1,52 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Poppins", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+#scroll-container {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+#scroll-text {
+    white-space: nowrap;
+    position: absolute;
+    animation: scroll 15s linear infinite;
+    animation-play-state: running;
+}
+
+.tile {
+    outline: 1px solid #ccccc8;
+    border: 5px solid transparent;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.tile:hover {
+    outline: 0px solid black;
+    border: 2px solid #000000;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+#scroll-container:hover #scroll-text {
+    animation-play-state: paused;
 }
